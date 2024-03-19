@@ -7,6 +7,8 @@ import 'components/weatherScreen/weather_screen.dart';
 import 'models/weather_forecast.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'models/custom_theme.dart';
+
 const sqlCreateDatabase = 'assets/sql/create.sql';
 
 void main() {
@@ -24,11 +26,12 @@ class MyApp extends StatelessWidget {
         valueListenable: _notifier,
         builder: (_, mode, __) {
           return MaterialApp(
-            title: 'CS 492 Weather App',
-            theme: ThemeData.light(),
+            title: 'Erics Weather App',
+            //theme: ThemeData.light(),
+            theme: custom_theme,
             darkTheme: ThemeData.dark(),
             themeMode: mode,
-            home: MyHomePage(title: "CS492 Weather App", notifier: _notifier),
+            home: MyHomePage(title: "Erics Weather App", notifier: _notifier),
           );
         });
   }
@@ -91,6 +94,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _openEndDrawer() {
     _scaffoldKey.currentState!.openEndDrawer();
+    //how to open from left rather than right?
+    //_scaffoldKey.currentState!.openDrawer();
   }
 
   void _closeEndDrawer() {
@@ -142,7 +147,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       key: _scaffoldKey,
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text(widget.title, style: TextStyle(fontFamily: 'MightySouly')),
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         actions: [
           IconButton(

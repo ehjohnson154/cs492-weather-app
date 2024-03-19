@@ -67,6 +67,13 @@ flutter:
   #   - images/a_dot_ham.jpeg
 
   assets:
+  #<a href="https://www.flaticon.com/"icons created by BZZRINCANTATION - Flaticon</a>
+    - assets/images/rain.png
+    - assets/images/sun.png
+    - assets/images/snowflake.png
+    - assets/images/wind.png
+    - assets/images/weather.png
+    - assets/images/clear.png
     - assets/sql/create.sql
     - assets/sql/insert.sql
     - assets/sql/get_all.sql
@@ -83,6 +90,11 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
+
+  fonts:
+    - family: MightySouly
+      fonts:
+        - asset: fonts/MightySouly.ttf
   # fonts:
   #   - family: Schyler
   #     fonts:
